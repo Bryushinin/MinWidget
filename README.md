@@ -3,4 +3,5 @@
  using determined or stochastic iterative method and different stop criteria.
  The result is being shown visually with the trajectory of iterations leading to the answer.
  Numerical results are provided below the graph.
- 
+ ![example](https://github.com/Bryushinin/MinWidget/blob/main/example.png?raw=true)
+
