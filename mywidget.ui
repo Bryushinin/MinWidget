@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyWidget</class>
+ <widget class="QWidget" name="MyWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1476</width>
+    <height>766</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MyWidget</string>
+  </property>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>-10</y>
+     <width>611</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Нахождение минимума заданной функции&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>1110</x>
+     <y>80</y>
+     <width>231</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Выберите функцию:</string>
+   </property>
+   <widget class="QRadioButton" name="func_rad_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>198</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>20*exp(sin((x+y)/20))+x*y</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="func_rad_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>301</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>(1-x)^2 + 100(y-x^2)^2</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="func_rad_1">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>31</y>
+      <width>104</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>sin(x)*cos(y)</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>1030</x>
+     <y>240</y>
+     <width>411</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Выберите критерий остановки итерационных методов:</string>
+   </property>
+   <widget class="QRadioButton" name="SC_button_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>243</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>По расстоянию между точками</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="SC_button_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>333</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>По частному значений функции</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="SC_button_1">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>41</y>
+      <width>169</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>По норме градиента</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>640</y>
+     <width>711</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Выберите метод оптимизации:</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>589</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QRadioButton" name="det_rad_button">
+       <property name="text">
+        <string>Метод Ньютона с аналитически полученными производными и матрицей Гессе</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="stoc_rad_button">
+       <property name="text">
+        <string>Метод случайного поиска с вероятностью локального поиска 0.5</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>660</y>
+     <width>761</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Задайте границы двумерной прямоугольной области оптимизации:</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>743</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_">
+       <property name="text">
+        <string>x_1:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edit_x_1">
+       <property name="minimumSize">
+        <size>
+         <width>149</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>149</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>x_2:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edit_x_2">
+       <property name="minimumSize">
+        <size>
+         <width>149</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>y_1:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edit_y_1">
+       <property name="minimumSize">
+        <size>
+         <width>149</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>y_2:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edit_y_2">
+       <property name="minimumSize">
+        <size>
+         <width>149</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>1090</x>
+     <y>410</y>
+     <width>282</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item>
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Задайте точность:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="eps_edit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="OKbutton">
+   <property name="geometry">
+    <rect>
+     <x>1160</x>
+     <y>500</y>
+     <width>136</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Optimize and draw</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>570</y>
+     <width>771</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>570</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;Результат:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
