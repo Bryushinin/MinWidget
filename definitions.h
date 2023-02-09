@@ -4,6 +4,7 @@
 #include <QLocale>
 #include <QMainWindow>
 #include <QObject>
+#include <QMouseEvent>
 #include <QTranslator>
 #include <iostream>
 #include "Eigen/QR"
@@ -22,7 +23,7 @@ vector<double> operator*(vector<vector<double>> a, vector<double> y);
 
 vector<double> operator*(double c, vector<double> x);
 
-
+int cure(int y);
 
 double norm(vector<double> x);
 

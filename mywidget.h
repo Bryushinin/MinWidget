@@ -27,12 +27,13 @@ class MyWidget : public QMainWindow
     void DrawAxis();
     void DrawArea();
     void paintEvent(QPaintEvent *);
-
+    void mousePressEvent(QMouseEvent *event);
+    bool sverhu;
 public:
     int func_num_;
     int sc_num_;
     int det_or_stoc_;
-    double x_1_,x_2_,y_1_,y_2_, eps_;
+    double x_1_,x_2_,y_1_,y_2_, eps_, x_0_x, x_0_y;
     vector<vector<double>> trajectory;
     Area D;
     Function* f;
@@ -46,7 +47,7 @@ public slots:
 private:
     Ui::MyWidget *ui;
 signals:
-    void OptimizingTime(int func_num__, int sc_num__, int det_or_stoc__, double x_1__, double x_2__, double y_1__, double y_2__, double eps__);
+    void OptimizingTime(int func_num__, int sc_num__, int det_or_stoc__, double x_1__, double x_2__, double y_1__, double y_2__, double eps__, double x0x, double x0y);
 };
 
 

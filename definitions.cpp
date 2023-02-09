@@ -49,7 +49,10 @@ vector<double> operator*(double c, vector<double> x)
     return x;
 }
 
-
+int cure(int y)
+{
+    return 620 - y;
+}
 
 double norm(vector<double> x)
 {

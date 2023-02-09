@@ -24,7 +24,7 @@ signals:
     void DrawIt(vector<vector<double>> a, Area D, bool rdy, Function* f, string res);
 public slots:
 
-    void CatchIt(int func_num, int sc_num, int det_or_stoc, double x_1, double x_2, double y_1, double y_2, double eps)
+    void CatchIt(int func_num, int sc_num, int det_or_stoc, double x_1, double x_2, double y_1, double y_2, double eps, double x0x, double x0y)
     {
         vector<Function*> funcs;
 
@@ -44,8 +44,9 @@ public slots:
         lefts.clear(); rights.clear();
         lefts.push_back(x_1);lefts.push_back(y_1);
         rights.push_back(x_2);rights.push_back(y_2);
-        x_0.push_back((lefts[0] + rights[0]) / 3.);
-        x_0.push_back((lefts[1] + rights[1]) / 2.);
+        x_0.push_back(x0x); x_0.push_back(x0y);
+        //x_0.push_back((lefts[0] + rights[0]) / 3.);
+        //x_0.push_back((lefts[1] + rights[1]) / 2.);
         if (det_or_stoc == 1)
         {
             Newton OM(f, x_0, lefts, rights, sc_num, eps);
